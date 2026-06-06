@@ -686,12 +686,16 @@
     .compare-head h2 { color: var(--navy); margin-bottom: 0.75rem; }
     .compare-head p { color: #556; font-size: 1.0625rem; max-width: 500px; margin: 0 auto; }
 
-    .comp-table {
-      width: 100%;
-      border-collapse: collapse;
+    .comp-table-wrap {
       border-radius: var(--r-lg);
       overflow: hidden;
       border: 1px solid rgba(26,31,78,0.08);
+      overflow-x: auto;
+    }
+    .comp-table {
+      width: 100%;
+      border-collapse: collapse;
+      min-width: 520px;
     }
     .comp-table th {
       padding: 1rem 1.25rem;
@@ -1381,6 +1385,7 @@
       <p>nuul isn't a replacement for Claude or ChatGPT — it's what you add to make them know you.</p>
     </div>
     <div class="reveal delay-1">
+      <div class="comp-table-wrap">
       <table class="comp-table">
         <thead>
           <tr>
@@ -1427,6 +1432,7 @@
           </tr>
         </tbody>
       </table>
+      </div>
     </div>
   </div>
 </section>
