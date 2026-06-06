@@ -724,6 +724,18 @@
       overflow: hidden;
       border: 1px solid rgba(26,31,78,0.08);
       overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+    }
+    @media (max-width: 640px) {
+      .comp-table th:first-child,
+      .comp-table td:first-child {
+        position: sticky;
+        left: 0;
+        z-index: 1;
+      }
+      .comp-table th:first-child { background: var(--navy); }
+      .comp-table td:first-child { background: #fff; }
+      .comp-table td.hi:first-child { background: rgba(240,168,14,0.04); }
     }
     .comp-table {
       width: 100%;
