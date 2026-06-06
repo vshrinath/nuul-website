@@ -151,6 +151,15 @@
     .scenario-dot { width: 5px; height: 5px; border-radius: 50%; background: rgba(255,255,255,0.18); transition: background 0.3s; cursor: pointer; border: none; padding: 0; }
     .scenario-dot.active { background: var(--amber); }
 
+    /* ─── Flywheel ─── */
+    .flywheel { background: var(--canvas); border-bottom: 1px solid rgba(22,32,64,0.07); padding: clamp(2rem,4vw,3rem) 0; }
+    .flywheel-inner { max-width: 820px; margin: 0 auto; padding: 0 clamp(1.25rem,4vw,3rem); display: flex; align-items: center; gap: clamp(1rem,3vw,2rem); }
+    .flywheel-step { flex: 1; text-align: center; }
+    .flywheel-step h4 { font-size: 0.95rem; font-weight: 700; color: var(--navy); margin-bottom: 0.35rem; }
+    .flywheel-step p { font-size: 0.78rem; color: var(--muted); line-height: 1.5; margin: 0; }
+    .flywheel-arrow { color: var(--amber); font-size: 1.4rem; flex-shrink: 0; opacity: 0.7; }
+    @media (max-width: 560px) { .flywheel-inner { flex-direction: column; } .flywheel-arrow { transform: rotate(90deg); } }
+
     /* ─── Capture ─── */
     .capture { background: var(--canvas2); }
     .capture-grid {
@@ -580,6 +589,27 @@
 </section>
 
 
+<!-- FLYWHEEL -->
+<section class="flywheel">
+  <div class="flywheel-inner reveal">
+    <div class="flywheel-step">
+      <h4>Capture</h4>
+      <p>Voice notes, WhatsApp, folders, emails — collected without friction.</p>
+    </div>
+    <div class="flywheel-arrow">→</div>
+    <div class="flywheel-step">
+      <h4>Remember</h4>
+      <p>Every decision, person, and thread — connected and always current.</p>
+    </div>
+    <div class="flywheel-arrow">→</div>
+    <div class="flywheel-step">
+      <h4>Create</h4>
+      <p>Proposals, briefs, updates — drafted from context, not a blank page.</p>
+    </div>
+  </div>
+</section>
+
+
 <!-- HOW IT STARTS -->
 <section class="capture" id="capture">
   <div class="capture-grid">
@@ -998,7 +1028,7 @@
     <div class="compare-head reveal">
       <p class="t-label" style="color:var(--muted);margin-bottom:.75rem;">How nuul is different</p>
       <h2 class="t-h1" style="color:var(--navy);margin-bottom:.75rem;">Not a replacement. An upgrade.</h2>
-      <p>nuul doesn't replace Claude or ChatGPT — it makes every AI you already use dramatically more useful.</p>
+      <p>nuul doesn't replace Claude or ChatGPT — it gives them the one thing they're missing: memory that persists.</p>
     </div>
     <div class="reveal delay-1">
       <div class="comp-table-wrap">
@@ -1076,7 +1106,7 @@
         <li><span class="pi">✓</span> AI assistant with your context</li>
         <li><span class="pi">✓</span> Voice, WhatsApp & folder capture</li>
         <li><span class="pi">✓</span> Meeting notes, people layer, studio</li>
-        <li><span class="pi">✓</span> Works with any AI model</li>
+        <li><span class="pi">✓</span> Memory that's yours, not a vendor's</li>
       </ul>
       <a href="#" class="price-cta price-cta-amber" style="font-size:1rem;padding:0.875rem;">Get early access →</a>
     </div>
