@@ -116,23 +116,9 @@
     .hero-badge .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--amber); }
     .hero-badge span { color: var(--amber); font-size: 0.78rem; font-weight: 600; letter-spacing: 0.05em; }
 
-    .hero-copy h1 { color: #fff; margin-bottom: 1.5rem; }
+    .hero-copy h1 { color: #fff; margin-bottom: 1.25rem; }
     .hero-copy h1 em { color: var(--amber); font-style: normal; }
-
-    /* Name input */
-    .name-input-wrap { margin-bottom: 1.75rem; }
-    .name-input-label { display: block; font-size: 0.72rem; color: rgba(255,255,255,0.38); font-weight: 600; letter-spacing: 0.09em; text-transform: uppercase; margin-bottom: 0.5rem; }
-    .name-input-row { display: flex; align-items: center; gap: 0.75rem; flex-wrap: wrap; }
-    .name-input {
-      background: rgba(255,255,255,0.09); border: 1.5px solid rgba(255,255,255,0.18);
-      border-radius: var(--r-sm); padding: 0.6rem 1rem;
-      font-size: 1rem; font-weight: 700; color: #fff; outline: none;
-      width: 180px; transition: border-color 0.2s; letter-spacing: -0.01em;
-      font-family: inherit;
-    }
-    .name-input::placeholder { color: rgba(255,255,255,0.22); font-weight: 400; }
-    .name-input:focus { border-color: var(--amber); }
-    .name-input-hint { font-size: 0.78rem; color: rgba(255,255,255,0.28); }
+    .hero-sub { color: rgba(255,255,255,0.62); font-size: 1.1rem; line-height: 1.75; margin-bottom: 1.75rem; max-width: 480px; }
 
     .hero-ctas { display: flex; gap: 0.875rem; flex-wrap: wrap; align-items: center; }
     .hero-note { margin-top: 1.25rem; font-size: 0.8rem; color: rgba(255,255,255,0.28); }
@@ -160,7 +146,6 @@
       max-width: 88%; line-height: 1.55;
     }
     .msg-reply strong { color: var(--amber); font-weight: 600; }
-    .assistant-name { color: var(--amber); font-weight: 700; }
 
     .scenario-dots { display: flex; gap: 0.4rem; justify-content: center; }
     .scenario-dot { width: 5px; height: 5px; border-radius: 50%; background: rgba(255,255,255,0.18); transition: background 0.3s; cursor: pointer; border: none; padding: 0; }
@@ -445,7 +430,6 @@
       .hero-ctas { justify-content: center; }
       .hero-badge { margin-left: auto; margin-right: auto; }
       .hero-note { text-align: center; }
-      .name-input-row { justify-content: center; }
       .ctaband-btns .btn { width: 100%; justify-content: center; }
     }
 
@@ -487,22 +471,16 @@
         <span>Your AI executive assistant</span>
       </div>
       <h1 class="t-display">
-        Everything organised.<br>Nothing forgotten.<br><em>Always ready.</em>
+        The executive assistant<br>you always wanted.
       </h1>
-
-      <div class="name-input-wrap">
-        <label class="name-input-label" for="assistant-name">Give your assistant a name</label>
-        <div class="name-input-row">
-          <input type="text" id="assistant-name" class="name-input" placeholder="e.g. Nova, Sage, Aria…" maxlength="20" autocomplete="off" />
-          <span class="name-input-hint">It'll use it when it talks to you.</span>
-        </div>
-      </div>
-
+      <p class="hero-sub">
+        nuul remembers every decision, knows every project, and briefs you before every meeting — automatically. No filing. No tagging. No remembering to remember.
+      </p>
       <div class="hero-ctas">
         <a href="#pricing" class="btn btn-amber btn-lg">Get early access →</a>
         <a href="#capture" class="btn btn-ghost btn-lg">See how it works</a>
       </div>
-      <p class="hero-note">Works with Claude, ChatGPT, Gemini, Ollama — any model you already use.</p>
+      <p class="hero-note">Works with any AI model you already use. Runs on your machine.</p>
     </div>
 
     <!-- Scenario carousel -->
@@ -511,22 +489,22 @@
         <div class="scenarios-inner">
 
           <div class="scenario active">
-            <div class="msg-user"><span class="assistant-name">Nuul</span>, what did we decide about pricing?</div>
+            <div class="msg-user">What did we decide about pricing in October?</div>
             <div class="msg-reply">October call with Rajan: hold the current tier through Q1, revisit in March. You both agreed. <strong>That's still the plan.</strong></div>
           </div>
 
           <div class="scenario">
-            <div class="msg-user"><span class="assistant-name">Nuul</span>, catch me up before my call with Priya.</div>
+            <div class="msg-user">Catch me up before my call with Priya.</div>
             <div class="msg-reply">Last spoke in August. She raised the contract renewal — you said you'd send revised terms. <strong>Still open.</strong> New stakeholder on her side: Vikram.</div>
           </div>
 
           <div class="scenario">
-            <div class="msg-user"><span class="assistant-name">Nuul</span>, what's Arjun's homework due tomorrow?</div>
+            <div class="msg-user">What's Arjun's homework due tomorrow?</div>
             <div class="msg-reply">Maths worksheet due tomorrow — from the photo you forwarded Monday. <strong>History quiz on Friday</strong> as well.</div>
           </div>
 
           <div class="scenario">
-            <div class="msg-user"><span class="assistant-name">Nuul</span>, what's open from last week?</div>
+            <div class="msg-user">What's still open from last week?</div>
             <div class="msg-reply">Three things: <strong>follow up with David</strong> on the proposal, <strong>send Priya the revised contract</strong>, and review the Q3 numbers Asha sent Thursday.</div>
           </div>
 
@@ -612,7 +590,7 @@
         <ul class="difm-items">
           <li><span class="di">✓</span> Watches your folders automatically</li>
           <li><span class="di">✓</span> Grabs what you send on WhatsApp</li>
-          <li><span class="di">✓</span> Locates the right files when you create</li>
+          <li><span class="di">✓</span> Locates the right files when you need them</li>
           <li><span class="di">✓</span> Sends you daily reminders of what's open</li>
           <li><span class="di">✓</span> The system maintains itself</li>
         </ul>
@@ -626,11 +604,11 @@
 <section class="compound">
   <div class="compound-grid">
     <div class="compound-copy reveal">
-      <p class="t-label" style="color:var(--muted);margin-bottom:.75rem;">The compounding advantage</p>
+      <p class="t-label" style="color:var(--muted);margin-bottom:.75rem;">It gets better over time</p>
       <h2 class="t-h1" style="color:var(--navy);margin-bottom:1rem;">A great EA learns.<br>So does nuul.</h2>
       <p>The first week, it catches your notes and files. By the second month, it knows your projects and the people in them — who matters, what's open, what you tend to let slide.</p>
       <p>By the end of the year, it knows your patterns better than you remember them yourself. Every session makes the next one richer. That's not automation. That's a working relationship.</p>
-      <blockquote>"As more work flows through nuul, the operational memory compounds. Notes connect to meetings. Meetings connect to people. People connect to decisions."</blockquote>
+      <blockquote>"A great executive assistant doesn't just remember facts — they understand the context behind them. nuul builds that picture continuously, connecting notes to meetings, meetings to people, people to decisions."</blockquote>
     </div>
     <div class="reveal delay-1">
       <div class="timeline">
@@ -671,7 +649,7 @@
         <div class="tl-footer">
           <div class="tl-footer-dot"></div>
           <span>247 connected items · still growing</span>
-          <span class="tl-count">↑ compounding</span>
+          <span class="tl-count">↑ getting richer</span>
         </div>
       </div>
     </div>
@@ -683,8 +661,8 @@
 <section class="vaults">
   <div class="vaults-inner">
     <div class="vaults-head reveal">
-      <p class="t-label">Your whole life, organised</p>
-      <h2 class="t-h1" style="color:var(--navy);margin-top:.75rem;">Separate contexts. Each one getting smarter.</h2>
+      <p class="t-label">Separate contexts</p>
+      <h2 class="t-h1" style="color:var(--navy);margin-top:.75rem;">Your whole life, organised.<br>Each part in its own place.</h2>
       <p style="margin-top:.875rem;">Your work doesn't need to know about your family. Your personal life doesn't need board presentations bleeding in. nuul keeps each world cleanly separate — each one accumulating its own memory. Switch between them the way you switch between hats.</p>
     </div>
     <div class="vault-grid">
@@ -730,7 +708,7 @@
 <!-- DAILY BRIEF -->
 <section class="daily-brief">
   <div class="daily-brief-inner reveal">
-    <span class="daily-brief-label">It works for you while you're not looking</span>
+    <span class="daily-brief-label">It works for you while you sleep</span>
     <p class="daily-brief-sub">Every morning, your assistant shows up ready.</p>
     <div class="db-card">
       <div class="db-greeting">Good morning — here's what's open today</div>
@@ -773,7 +751,7 @@
 <section class="personas" id="personas">
   <div class="persona-head reveal">
     <p class="t-label">Who it's for</p>
-    <h2 class="t-h1" style="margin-top:.75rem;">Built for people who think for a living.</h2>
+    <h2 class="t-h1" style="margin-top:.75rem;">Built for people who carry a lot.</h2>
     <p style="margin-top:.875rem;">If your work is complex, your context is scattered, and your memory is doing too much of the filing — nuul is for you.</p>
   </div>
   <div class="persona-grid">
@@ -781,25 +759,25 @@
       <div class="persona-icon">🚀</div>
       <h3>Founders</h3>
       <span class="persona-role">CEO · Co-founder · Operator</span>
-      <p>You're running a company inside your head. Investor conversations, team decisions, strategic pivots — all of it lives somewhere between your notes, your WhatsApp, and your memory. nuul holds it so you don't have to.</p>
+      <p>You're running a company inside your head. The investor call from Tuesday, the product decision made on a walk, the open thread with your co-founder — scattered across notes, WhatsApp, and memory. nuul holds the whole picture so you can focus on what's next.</p>
     </div>
     <div class="persona-card reveal delay-1">
       <div class="persona-icon">🏢</div>
       <h3>Business Leaders</h3>
       <span class="persona-role">CXO · VP · Chief of Staff</span>
-      <p>You walk into ten meetings a week. nuul walks in ready — with everything said last time, everything still open, and the full context to ask the right questions.</p>
+      <p>You walk into ten meetings a week. nuul walks in ready — with everything said last time, everything still open, and the full context to ask the right question at the right moment. No prep time. No gaps.</p>
     </div>
     <div class="persona-card reveal delay-2">
       <div class="persona-icon">📰</div>
       <h3>Journalists & Researchers</h3>
       <span class="persona-role">Writers · Researchers · Editors</span>
-      <p>Months of interviews, sources, observations — structurally connected. A story brief that draws from everything you've gathered, not from what you happened to write down.</p>
+      <p>Months of interviews, sources, and observations — structurally connected, not buried in notebooks. Pull a story brief from everything you've gathered, not just what you happened to remember to write down.</p>
     </div>
     <div class="persona-card reveal delay-3">
       <div class="persona-icon">🎯</div>
       <h3>Consultants & Advisors</h3>
       <span class="persona-role">Consultants · Analysts · Advisors</span>
-      <p>Each client is a world of context. nuul keeps them separate — each one compounding on its own — so you always know where you are, whatever hat you're wearing.</p>
+      <p>Each client is a world of context. nuul keeps them separate — each one accumulating its own memory — so you always know where you are, whatever hat you're wearing that day.</p>
     </div>
   </div>
 </section>
@@ -808,9 +786,9 @@
 <!-- FEATURES -->
 <section class="features">
   <div class="section-head reveal">
-    <p class="t-label">What nuul does</p>
-    <h2 class="t-h1" style="margin-top:.75rem;">The full DIFM picture.</h2>
-    <p style="margin-top:.875rem;">Everything that used to be your job — captured, connected, organised, and ready — without you lifting a finger.</p>
+    <p class="t-label">What your assistant does</p>
+    <h2 class="t-h1" style="margin-top:.75rem;">Everything it does for you.</h2>
+    <p style="margin-top:.875rem;">Every task that used to fall on you — captured, connected, organised, and ready — without you lifting a finger.</p>
   </div>
   <div class="feat-wrap">
     <div class="feat-grid reveal">
@@ -872,7 +850,7 @@
       <div class="feat-cell">
         <div class="feat-icon">📱</div>
         <h4>Works everywhere</h4>
-        <p>Desktop app, mobile PWA, WhatsApp. One vault. One assistant. Everywhere you are.</p>
+        <p>Desktop app, mobile, WhatsApp. One vault. One assistant. Everywhere you are.</p>
       </div>
     </div>
   </div>
@@ -891,17 +869,17 @@
       <div class="principle-card reveal">
         <span class="principle-icon">🔒</span>
         <h3>Private by design</h3>
-        <p>Your data lives on your machine and in a private GitHub repo you own. We never see it, touch it, or store it on our servers. You could cancel today — your memory stays yours, in plain readable files, forever.</p>
+        <p>Your data lives on your machine, in files only you can access. nuul never sees it, touches it, or stores it on our servers. Cancel today — your memory stays yours, readable and complete, forever.</p>
       </div>
       <div class="principle-card reveal delay-1">
         <span class="principle-icon">💰</span>
         <h3>Affordable by design</h3>
-        <p>No subscription tax on top of your AI. Bring your own key. Most of what nuul does — filing, connecting, organising — doesn't even need an AI call. Groq's free tier is enough for most people's daily use.</p>
+        <p>No subscription tax on top of your AI. Most of what nuul does — filing, connecting, organising — happens automatically without an expensive AI call. Intelligence fires only when you need it.</p>
       </div>
       <div class="principle-card reveal delay-2">
         <span class="principle-icon">🌐</span>
         <h3>Open by design</h3>
-        <p>Plain markdown files. Any model. No lock-in. Use Claude today, switch to something better tomorrow — your entire accumulated context travels with you. That's the whole point.</p>
+        <p>Use Claude today, switch to something better tomorrow — your entire accumulated context travels with you. Plain files, any model, no lock-in. That's the whole point.</p>
       </div>
     </div>
   </div>
@@ -953,14 +931,14 @@
               <td class="hi"><span class="check">✓</span> Any surface, any device</td>
             </tr>
             <tr>
-              <td class="feat">Compounds over time</td>
+              <td class="feat">Gets richer over time</td>
               <td><span class="cross">✗</span> History accumulates, context stays flat</td>
               <td class="hi"><span class="check">✓</span> Richer with every session</td>
             </tr>
             <tr>
               <td class="feat">Data ownership</td>
               <td><span class="cross">✗</span> Vendor servers, no real export</td>
-              <td class="hi"><span class="check">✓</span> Your GitHub repo, plain markdown</td>
+              <td class="hi"><span class="check">✓</span> Your machine, your files</td>
             </tr>
             <tr>
               <td class="feat">Model flexibility</td>
@@ -979,11 +957,8 @@
 <section class="pricing" id="pricing">
   <div class="pricing-head reveal">
     <p class="t-label">Pricing</p>
-    <h2 class="t-h1" style="margin-top:.75rem;">No subscription. No vendor cloud.</h2>
-    <p style="margin-top:.875rem;">nuul runs on your machine and your GitHub. Pay for the compute you actually use — no markup, no lock-in.</p>
-    <p style="margin-top:1rem;font-size:0.9rem;color:var(--muted);max-width:540px;margin-left:auto;margin-right:auto;">
-      Most of nuul's work — filing, linking, extracting, connecting — happens automatically without calling AI at all. Your AI key fires only when you ask for something that needs intelligence. That's why Groq's free tier covers most people's daily use.
-    </p>
+    <h2 class="t-h1" style="margin-top:.75rem;">Simple pricing. No surprises.</h2>
+    <p style="margin-top:.875rem;">nuul runs on your machine. Pay for the compute you actually use — no markup, no lock-in, no hidden costs.</p>
   </div>
   <div class="price-grid">
     <div class="price-card reveal">
@@ -995,8 +970,8 @@
         <li><span class="pi">✓</span> Full vault & capture</li>
         <li><span class="pi">✓</span> AI chat with your context</li>
         <li><span class="pi">✓</span> Voice + WhatsApp capture</li>
-        <li><span class="pi">✓</span> Meeting notes & OCR</li>
-        <li><span class="pi">✓</span> Bring your own AI key</li>
+        <li><span class="pi">✓</span> Meeting notes & file parsing</li>
+        <li><span class="pi">✓</span> Use any AI model you already have</li>
       </ul>
       <a href="#" class="price-cta price-cta-light">Get started free</a>
     </div>
@@ -1004,11 +979,11 @@
       <span class="price-tier">Cloud</span>
       <h3>Self-hosted</h3>
       <div class="price-amount">~$5</div>
-      <span class="price-period">per month · your VPS</span>
+      <span class="price-period">per month · privately hosted</span>
       <ul class="price-features">
         <li><span class="pi">✓</span> Everything in Free</li>
         <li><span class="pi">✓</span> Access from any device</li>
-        <li><span class="pi">✓</span> Mobile PWA</li>
+        <li><span class="pi">✓</span> Mobile app</li>
         <li><span class="pi">✓</span> Background workflows</li>
         <li><span class="pi">✓</span> Daily briefings</li>
       </ul>
@@ -1023,7 +998,7 @@
         <li><span class="pi">✓</span> Everything in Cloud</li>
         <li><span class="pi">✓</span> One-click setup</li>
         <li><span class="pi">✓</span> Managed updates</li>
-        <li><span class="pi">✓</span> Still your GitHub vault</li>
+        <li><span class="pi">✓</span> Your data stays yours</li>
         <li><span class="pi">✓</span> Priority support</li>
       </ul>
       <a href="#" class="price-cta price-cta-light">Join waitlist</a>
@@ -1045,11 +1020,11 @@
     </div>
     <div class="faq-item reveal">
       <div class="faq-q">Do I need to be technical to use nuul? <span class="faq-chevron">▾</span></div>
-      <div class="faq-a">Not at all. Setup takes about ten minutes — connect your GitHub account, get a free API key from Groq, and you're running. The interface is designed for people who think for a living, not engineers. If you can use Google Docs, you can use nuul.</div>
+      <div class="faq-a">Not at all. Setup takes about ten minutes. If you can use Google Docs, you can use nuul. We're building the setup to be as simple as possible — and a full how-it-works guide is coming soon for anyone who wants to go deeper.</div>
     </div>
     <div class="faq-item reveal">
       <div class="faq-q">Who can see my data? <span class="faq-chevron">▾</span></div>
-      <div class="faq-a">Nobody but you. Your vault is stored in a private GitHub repository that you own. nuul never touches your data on our servers — the engine runs on your machine. Even if nuul disappeared tomorrow, your files are yours in plain readable markdown.</div>
+      <div class="faq-a">Nobody but you. Your vault is stored in files on your own machine. nuul never touches your data on our servers — the engine runs locally. Even if nuul disappeared tomorrow, your files are yours in plain, readable format — complete and accessible forever.</div>
     </div>
     <div class="faq-item reveal">
       <div class="faq-q">Does nuul replace my AI subscription? <span class="faq-chevron">▾</span></div>
@@ -1057,7 +1032,7 @@
     </div>
     <div class="faq-item reveal">
       <div class="faq-q">What if I want to switch AI models? <span class="faq-chevron">▾</span></div>
-      <div class="faq-a">Just change one line in your config. Your entire operational memory — notes, people, threads, decisions — travels to the new model instantly. The context is stored as plain markdown, not inside any AI provider's systems. Switch freely, any time.</div>
+      <div class="faq-a">Just change one setting. Your entire operational memory — notes, people, threads, decisions — travels to the new model instantly. The context is stored as plain files, not inside any AI provider's systems. Switch freely, any time.</div>
     </div>
     <div class="faq-item reveal">
       <div class="faq-q">How is this different from Notion AI or ChatGPT memory? <span class="faq-chevron">▾</span></div>
@@ -1070,9 +1045,9 @@
 <!-- CTA -->
 <section class="ctaband">
   <div class="ctaband-inner reveal">
-    <p class="t-label">Start the conversation</p>
-    <h2 class="t-h1" style="margin-top:.75rem;">Give your assistant a name.<br><em>Let it begin.</em></h2>
-    <p class="sub" style="margin-top:1rem;">Every day you don't use nuul is a day of context that doesn't compound. Start now — and let it begin building the picture of how you work.</p>
+    <p class="t-label">Your assistant is waiting</p>
+    <h2 class="t-h1" style="margin-top:.75rem;">The sooner it starts,<br>the <em>smarter it gets.</em></h2>
+    <p class="sub" style="margin-top:1rem;">Every day is context that builds. Give it a week — and you'll wonder how you worked without it.</p>
     <div class="ctaband-btns">
       <a href="#pricing" class="btn btn-amber btn-lg">Get early access →</a>
       <a href="#capture" class="btn btn-ghost btn-lg">See how it works</a>
@@ -1086,7 +1061,7 @@
   <div class="footer-inner">
     <div>
       <a href="#" class="wordmark">nu<span>ul</span></a>
-      <p class="footer-note">The compounding advantage for knowledge work.</p>
+      <p class="footer-note">The executive assistant for knowledge work.</p>
     </div>
     <ul class="footer-links">
       <li><a href="#">GitHub</a></li>
@@ -1105,15 +1080,6 @@
     toggle.addEventListener('click', () => navLinks.classList.toggle('open'));
     navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => navLinks.classList.remove('open')));
   }
-
-  // Name input → update all .assistant-name spans
-  const nameInput = document.getElementById('assistant-name');
-  const nameSpans = document.querySelectorAll('.assistant-name');
-  const defaultName = 'Nuul';
-  nameInput.addEventListener('input', () => {
-    const val = nameInput.value.trim() || defaultName;
-    nameSpans.forEach(s => s.textContent = val);
-  });
 
   // Scenario carousel
   const scenarios = document.querySelectorAll('.scenario');
