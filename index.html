@@ -354,10 +354,10 @@
     }
     .steps {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(2, 1fr);
       gap: 1.5rem;
     }
-    @media (max-width: 720px) { .steps { grid-template-columns: 1fr; } }
+    @media (max-width: 640px) { .steps { grid-template-columns: 1fr; } }
 
     .step-card {
       background: #fff;
@@ -540,15 +540,16 @@
     }
     .feat-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(4, 1fr);
       gap: 1px;
       background: rgba(255,255,255,0.07);
       border-radius: var(--r-lg);
       overflow: hidden;
       border: 1px solid rgba(255,255,255,0.07);
     }
-    @media (max-width: 768px) { .feat-grid { grid-template-columns: 1fr 1fr; } }
-    @media (max-width: 480px) { .feat-grid { grid-template-columns: 1fr; } }
+    @media (max-width: 960px) { .feat-grid { grid-template-columns: repeat(3, 1fr); } }
+    @media (max-width: 680px) { .feat-grid { grid-template-columns: 1fr 1fr; } }
+    @media (max-width: 420px) { .feat-grid { grid-template-columns: 1fr; } }
 
     .feat-cell {
       background: var(--navy-mid);
@@ -1063,41 +1064,54 @@
 <section class="how" id="how">
   <div class="section-head reveal">
     <p class="t-label">How it works</p>
-    <h2 class="t-h1" style="margin-top:.75rem;">Three steps. One compound effect.</h2>
-    <p style="margin-top:.75rem;">nuul sits alongside the tools you already use and builds a growing operational memory — yours to own, any model to use.</p>
+    <h2 class="t-h1" style="margin-top:.75rem;">From anything you capture<br>to everything you produce</h2>
+    <p style="margin-top:.75rem;">Throw things in from anywhere. nuul does the organising. You do the thinking. The output is yours.</p>
   </div>
   <div class="steps-wrap">
     <div class="steps">
       <div class="step-card reveal">
         <div class="step-num">1</div>
-        <h3>Capture everything</h3>
-        <p>Voice notes, meetings, decisions, documents, WhatsApp messages, dropped files — everything flows into your vault without friction.</p>
+        <h3>Capture without friction</h3>
+        <p>Voice note on a walk. WhatsApp forward from a client. PDF dropped into a folder. Meeting recording. Anything goes in — from any device, in any format, without interrupting what you're doing.</p>
         <div class="step-tags">
           <span class="step-tag">Voice → text</span>
           <span class="step-tag">Meeting notes</span>
           <span class="step-tag">Files & PDFs</span>
           <span class="step-tag">WhatsApp</span>
+          <span class="step-tag">Folder watch</span>
         </div>
       </div>
       <div class="step-card reveal delay-1">
         <div class="step-num">2</div>
-        <h3>Compound over time</h3>
-        <p>Notes stay connected to meetings. Meetings connect to people. Decisions stay linked to projects. The vault builds a structurally-connected operational memory — automatically.</p>
+        <h3>nuul processes it automatically</h3>
+        <p>nuul reads what came in, extracts the decisions, tasks, and people mentioned, and links it to what's already in your vault. When something is ambiguous — you get a quick triage prompt, not a filing task. Most of this happens without AI touching it, keeping your costs near zero.</p>
         <div class="step-tags">
-          <span class="step-tag">Semantic links</span>
-          <span class="step-tag">Thread continuity</span>
-          <span class="step-tag">Auto-organised</span>
+          <span class="step-tag">Auto-extract</span>
+          <span class="step-tag">Smart triage</span>
+          <span class="step-tag">Connects people & projects</span>
+          <span class="step-tag">No manual filing</span>
         </div>
       </div>
-      <div class="step-card reveal delay-2">
+      <div class="step-card reveal">
         <div class="step-num">3</div>
-        <h3>Converse with context</h3>
-        <p>Every AI session draws from everything that came before. Ask about a client from six months ago, a decision from last quarter, a project still in motion.</p>
+        <h3>Create from what you've built</h3>
+        <p>Ask nuul to write a proposal, build a presentation, draft a post, or summarise a quarter. It draws from everything in your vault — not from a blank page. The more context you've accumulated, the richer the starting point.</p>
         <div class="step-tags">
-          <span class="step-tag">Claude</span>
-          <span class="step-tag">ChatGPT</span>
-          <span class="step-tag">Gemini</span>
-          <span class="step-tag">Ollama</span>
+          <span class="step-tag">Documents</span>
+          <span class="step-tag">Presentations</span>
+          <span class="step-tag">Proposals</span>
+          <span class="step-tag">Posts & summaries</span>
+        </div>
+      </div>
+      <div class="step-card reveal delay-1">
+        <div class="step-num">4</div>
+        <h3>Share and move on</h3>
+        <p>Export to PDF. Send by email. Post to LinkedIn. Push to Notion. Or just have it ready in your vault for the next conversation. The work is done — and it stays connected for whatever comes next.</p>
+        <div class="step-tags">
+          <span class="step-tag">Export PDF</span>
+          <span class="step-tag">Send by email</span>
+          <span class="step-tag">Publish</span>
+          <span class="step-tag">Stays in vault</span>
         </div>
       </div>
     </div>
@@ -1218,26 +1232,26 @@
 <!-- FEATURES -->
 <section class="features">
   <div class="section-head reveal">
-    <p class="t-label">Capabilities</p>
-    <h2 class="t-h1" style="margin-top:.75rem;">Everything you need. Nothing you don't.</h2>
-    <p style="margin-top:.75rem;">nuul is a complete operational layer — capture, compose, connect, query — designed to stay out of your way.</p>
+    <p class="t-label">What nuul does</p>
+    <h2 class="t-h1" style="margin-top:.75rem;">The full picture — in one place</h2>
+    <p style="margin-top:.75rem;">From capturing a thought to shipping a finished document, nuul covers the whole arc of knowledge work.</p>
   </div>
   <div class="feat-wrap">
     <div class="feat-grid reveal">
       <div class="feat-cell">
         <div class="feat-icon">🎙️</div>
         <h4>Voice capture</h4>
-        <p>Speak naturally on mobile or desktop. Transcribed, tagged, and ready to link to anything.</p>
+        <p>Speak naturally on mobile or desktop. Transcribed and filed automatically — no editing needed.</p>
       </div>
       <div class="feat-cell">
         <div class="feat-icon">📋</div>
         <h4>Meeting notes</h4>
-        <p>Transcripts become structured notes connected to people, projects, and follow-up tasks automatically.</p>
+        <p>Recordings become structured notes. Tasks, decisions, and follow-ups are extracted and linked to the right people and projects.</p>
       </div>
       <div class="feat-cell">
         <div class="feat-icon">🔍</div>
-        <h4>Semantic search</h4>
-        <p>Ask in plain language. Find that conversation from three months ago or the document you half-remember.</p>
+        <h4>Ask anything</h4>
+        <p>Find that conversation from three months ago or the decision you half-remember. Ask in plain language — nuul searches everything.</p>
       </div>
       <div class="feat-cell">
         <div class="feat-icon">💬</div>
@@ -1245,29 +1259,44 @@
         <p>Forward a message, share a voice note, drop a PDF — it flows into your vault without opening another app.</p>
       </div>
       <div class="feat-cell">
-        <div class="feat-icon">🧵</div>
-        <h4>Thread continuity</h4>
-        <p>Notes, meetings, people, decisions — linked structurally over months. Continuity that computes, not just recalls.</p>
+        <div class="feat-icon">🔗</div>
+        <h4>Everything stays connected</h4>
+        <p>Notes link to meetings, meetings link to people, people link to projects and decisions. The connections build up automatically over time.</p>
       </div>
       <div class="feat-cell">
         <div class="feat-icon">📄</div>
-        <h4>Documents & decks</h4>
-        <p>Turn vault content into proposals, presentations, or posts without leaving the system.</p>
+        <h4>Studio</h4>
+        <p>Create documents, proposals, presentations, and social posts directly from your vault — starting from your accumulated context, not a blank page.</p>
+      </div>
+      <div class="feat-cell">
+        <div class="feat-icon">⚙️</div>
+        <h4>Workflows</h4>
+        <p>Set up automations that run in the background — meeting summaries, YouTube digests, weekly reviews, follow-up reminders. nuul works while you're not watching.</p>
       </div>
       <div class="feat-cell">
         <div class="feat-icon">👥</div>
         <h4>People layer</h4>
-        <p>Contacts, conversation history, follow-ups, and relationship context — all connected to the work they're part of.</p>
+        <p>Everyone you work with — their history, conversations, open threads, and follow-ups — in one place, connected to the actual work.</p>
       </div>
       <div class="feat-cell">
         <div class="feat-icon">📥</div>
         <h4>OCR & file parsing</h4>
-        <p>Drop any file — PDF, image, screenshot. Text extracted, indexed, and ready to query.</p>
+        <p>Drop any file — PDF, image, screenshot. Text extracted, indexed, and searchable immediately.</p>
       </div>
       <div class="feat-cell">
         <div class="feat-icon">⚡</div>
         <h4>Menu bar presence</h4>
         <p>Always there, never in the way. A keystroke opens capture. A glance shows what needs attention today.</p>
+      </div>
+      <div class="feat-cell">
+        <div class="feat-icon">📥</div>
+        <h4>Smart triage</h4>
+        <p>When something is ambiguous, nuul surfaces it for a quick decision — not a filing task. One tap to confirm, skip, or reassign.</p>
+      </div>
+      <div class="feat-cell">
+        <div class="feat-icon">📱</div>
+        <h4>Works everywhere</h4>
+        <p>Desktop app, mobile PWA, and WhatsApp as a capture surface. The same vault, the same context, wherever you are.</p>
       </div>
     </div>
   </div>
@@ -1408,6 +1437,11 @@
     <p class="t-label">Pricing</p>
     <h2 class="t-h1" style="margin-top:.75rem;">No subscription. No vendor cloud.</h2>
     <p style="margin-top:.75rem;">nuul runs on your machine and your GitHub. Pay for the compute you use — no markup, no lock-in.</p>
+    <p style="margin-top:1rem;font-size:0.9rem;color:var(--muted);max-width:540px;margin-left:auto;margin-right:auto;">
+      Most of nuul's work — filing, linking, extracting, threading — happens automatically without calling AI at all.
+      Your AI key fires only when you ask for something that needs intelligence: writing, summarising, searching.
+      That's why Groq's free tier is enough for most people's daily use.
+    </p>
   </div>
   <div class="price-grid">
     <div class="price-card reveal">
