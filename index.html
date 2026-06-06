@@ -308,21 +308,31 @@
     .persona-role { font-size: 0.78rem; color: var(--muted); font-weight: 500; margin-bottom: 0.875rem; display: block; }
     .persona-card p { font-size: 0.875rem; color: #556; line-height: 1.62; }
 
-    /* ─── Features / DIFM capabilities ─── */
+    /* ─── Features scroll ─── */
     .features { background: var(--navy); }
     .features .section-head .t-label { color: rgba(240,168,14,0.65); }
     .features .section-head h2 { color: #fff; }
     .features .section-head p { color: rgba(255,255,255,0.48); }
-    .features .section-head { text-align: center; margin-bottom: clamp(2.5rem, 5vw, 4rem); max-width: 1280px; margin-left: auto; margin-right: auto; padding: 0 clamp(1.25rem, 4vw, 3rem); }
-    .feat-wrap { max-width: 1280px; margin: 0 auto; padding: 0 clamp(1.25rem, 4vw, 3rem); }
-    .feat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: rgba(255,255,255,0.07); border-radius: var(--r-lg); overflow: hidden; border: 1px solid rgba(255,255,255,0.07); }
-    @media (max-width: 720px) { .feat-grid { grid-template-columns: 1fr 1fr; } }
-    @media (max-width: 420px) { .feat-grid { grid-template-columns: 1fr; } }
-    .feat-cell { background: var(--navy-mid); padding: 1.75rem; transition: background 0.2s; }
-    .feat-cell:hover { background: #243564; }
-    .feat-icon { font-size: 1.5rem; margin-bottom: 0.875rem; }
-    .feat-cell h4 { font-size: 0.95rem; font-weight: 650; color: #fff; margin-bottom: 0.35rem; }
-    .feat-cell p { font-size: 0.83rem; color: rgba(255,255,255,0.48); line-height: 1.55; }
+    .features .section-head { text-align: center; margin-bottom: clamp(2rem, 4vw, 3rem); max-width: 1280px; margin-left: auto; margin-right: auto; padding: 0 clamp(1.25rem, 4vw, 3rem); }
+    .feat-scroll-outer { position: relative; }
+    .feat-scroll-outer::after { content: ''; position: absolute; right: 0; top: 0; bottom: 2rem; width: clamp(3rem, 7vw, 5rem); background: linear-gradient(to right, transparent, var(--navy)); pointer-events: none; z-index: 1; }
+    .feat-scroll-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; scrollbar-width: none; scroll-snap-type: x mandatory; padding: 0.25rem clamp(1.25rem, 4vw, 3rem) 2rem; cursor: grab; }
+    .feat-scroll-wrap::-webkit-scrollbar { display: none; }
+    .feat-scroll-wrap.is-dragging { cursor: grabbing; user-select: none; }
+    .feat-scroll { display: flex; gap: 1rem; }
+    .feat-card { width: 280px; flex-shrink: 0; scroll-snap-align: start; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.09); border-radius: 20px; overflow: hidden; display: flex; flex-direction: column; transition: border-color 0.25s; }
+    .feat-card:hover { border-color: rgba(255,255,255,0.22); }
+    .feat-card-visual { height: 130px; display: flex; align-items: center; justify-content: center; font-size: 2.75rem; }
+    .feat-card:nth-child(1) .feat-card-visual { background: rgba(240,168,14,0.12); }
+    .feat-card:nth-child(2) .feat-card-visual { background: rgba(124,158,240,0.12); }
+    .feat-card:nth-child(3) .feat-card-visual { background: rgba(90,209,138,0.1); }
+    .feat-card:nth-child(4) .feat-card-visual { background: rgba(176,124,240,0.1); }
+    .feat-card:nth-child(5) .feat-card-visual { background: rgba(240,120,90,0.1); }
+    .feat-card:nth-child(6) .feat-card-visual { background: rgba(240,168,14,0.12); }
+    .feat-card-body { padding: 1.5rem; flex: 1; }
+    .feat-card h4 { font-size: 0.975rem; font-weight: 700; color: #fff; margin-bottom: 0.5rem; line-height: 1.3; }
+    .feat-card p { font-size: 0.82rem; color: rgba(255,255,255,0.48); line-height: 1.55; }
+    .feat-hint { text-align: center; font-size: 0.7rem; color: rgba(255,255,255,0.18); letter-spacing: 0.06em; padding-bottom: 0.5rem; }
 
     /* ─── Principles ─── */
     .principles { background: var(--canvas2); }
@@ -901,39 +911,54 @@
     <h2 class="t-h1" style="margin-top:.75rem;">Everything it does for you.</h2>
     <p style="margin-top:.875rem;">Every task that used to fall on you — captured, connected, organised, and ready — without you lifting a finger.</p>
   </div>
-  <div class="feat-wrap">
-    <div class="feat-grid reveal">
-      <div class="feat-cell">
-        <div class="feat-icon">🎙️</div>
-        <h4>Voice & WhatsApp capture</h4>
-        <p>Voice note on the go, forward on WhatsApp — transcribed, tagged, and connected. No editing, no app-switching.</p>
-      </div>
-      <div class="feat-cell">
-        <div class="feat-icon">📁</div>
-        <h4>Folder watching</h4>
-        <p>Points at your Downloads or any folder you choose. Files land there, nuul reads and files them — automatically.</p>
-      </div>
-      <div class="feat-cell">
-        <div class="feat-icon">📋</div>
-        <h4>Meeting notes</h4>
-        <p>Recordings become structured notes. Decisions, tasks, and follow-ups extracted and linked to the right people.</p>
-      </div>
-      <div class="feat-cell">
-        <div class="feat-icon">🔍</div>
-        <h4>Ask anything</h4>
-        <p>Three months ago, you made a decision. Ask in plain language — nuul finds it instantly, with context.</p>
-      </div>
-      <div class="feat-cell">
-        <div class="feat-icon">👥</div>
-        <h4>People layer</h4>
-        <p>Everyone you work with — their history, open threads, and follow-ups — in one place, always current.</p>
-      </div>
-      <div class="feat-cell">
-        <div class="feat-icon">📄</div>
-        <h4>Create & share</h4>
-        <p>Proposals, briefs, updates — drafted from your context, not a blank page. Edit, approve, and send without switching tools.</p>
+  <div class="feat-scroll-outer">
+    <div class="feat-scroll-wrap reveal" id="featScroll">
+      <div class="feat-scroll">
+        <div class="feat-card">
+          <div class="feat-card-visual">🎙️</div>
+          <div class="feat-card-body">
+            <h4>Voice & WhatsApp</h4>
+            <p>Voice note on the go, forward on WhatsApp — transcribed, tagged, and connected. No editing, no app-switching.</p>
+          </div>
+        </div>
+        <div class="feat-card">
+          <div class="feat-card-visual">📁</div>
+          <div class="feat-card-body">
+            <h4>Folder watching</h4>
+            <p>Point it at your Downloads or any folder. Files land there, nuul reads and files them — automatically, every time.</p>
+          </div>
+        </div>
+        <div class="feat-card">
+          <div class="feat-card-visual">📋</div>
+          <div class="feat-card-body">
+            <h4>Meeting notes</h4>
+            <p>Recordings become structured notes. Decisions, tasks, follow-ups — extracted and linked to the right people.</p>
+          </div>
+        </div>
+        <div class="feat-card">
+          <div class="feat-card-visual">🔍</div>
+          <div class="feat-card-body">
+            <h4>Ask anything</h4>
+            <p>Three months ago, you made a decision. Ask in plain language — nuul finds it instantly, with full context.</p>
+          </div>
+        </div>
+        <div class="feat-card">
+          <div class="feat-card-visual">👥</div>
+          <div class="feat-card-body">
+            <h4>People layer</h4>
+            <p>Everyone you work with — their history, open threads, follow-ups — in one place, always current.</p>
+          </div>
+        </div>
+        <div class="feat-card">
+          <div class="feat-card-visual">📄</div>
+          <div class="feat-card-body">
+            <h4>Create & share</h4>
+            <p>Proposals, briefs, updates — drafted from your context, not a blank page. Edit, approve, send.</p>
+          </div>
+        </div>
       </div>
     </div>
+    <p class="feat-hint">← swipe to explore →</p>
   </div>
 </section>
 
@@ -955,7 +980,7 @@
       <div class="principle-card reveal delay-1">
         <span class="principle-icon">💰</span>
         <h3>Affordable by design</h3>
-        <p>No subscription tax on top of your AI. Most of what nuul does — filing, connecting, organising — happens automatically without an expensive AI call. Intelligence fires only when you need it.</p>
+        <p>Most of what nuul does — filing, connecting, organising — happens automatically without an expensive AI call. Intelligence fires only when you need it, keeping costs low by design.</p>
       </div>
       <div class="principle-card reveal delay-2">
         <span class="principle-icon">🌐</span>
@@ -1019,7 +1044,7 @@
             <tr>
               <td class="feat">Data ownership</td>
               <td><span class="cross">✗</span> Vendor servers, no real export</td>
-              <td class="hi"><span class="check">✓</span> Your machine, your files</td>
+              <td class="hi"><span class="check">✓</span> Your files, your control</td>
             </tr>
             <tr>
               <td class="feat">Model flexibility</td>
@@ -1076,7 +1101,7 @@
     </div>
     <div class="faq-item reveal">
       <div class="faq-q">Who can see my data? <span class="faq-chevron">▾</span></div>
-      <div class="faq-a">Nobody but you. Your vault is stored in files on your own machine. nuul never touches your data on our servers — the engine runs locally. Even if nuul disappeared tomorrow, your files are yours in plain, readable format — complete and accessible forever.</div>
+      <div class="faq-a">Nobody but you. Your vault is stored in files you own and control — not locked inside a vendor's database. nuul never trains on your data, sells it, or accesses it without your knowledge. Whatever hosting option you choose, that guarantee never changes. And if nuul disappeared tomorrow, your files are yours in plain, readable format — complete and accessible forever.</div>
     </div>
     <div class="faq-item reveal">
       <div class="faq-q">Does nuul replace my AI subscription? <span class="faq-chevron">▾</span></div>
@@ -1174,6 +1199,28 @@
       if (!isOpen) item.classList.add('open');
     });
   });
+
+  // Drag-to-scroll for feature cards
+  const featScroll = document.getElementById('featScroll');
+  if (featScroll) {
+    let isDown = false, startX, scrollLeft;
+    featScroll.addEventListener('mousedown', e => {
+      isDown = true;
+      featScroll.classList.add('is-dragging');
+      startX = e.pageX - featScroll.offsetLeft;
+      scrollLeft = featScroll.scrollLeft;
+    });
+    document.addEventListener('mouseup', () => {
+      isDown = false;
+      featScroll.classList.remove('is-dragging');
+    });
+    featScroll.addEventListener('mousemove', e => {
+      if (!isDown) return;
+      e.preventDefault();
+      const x = e.pageX - featScroll.offsetLeft;
+      featScroll.scrollLeft = scrollLeft - (x - startX) * 1.2;
+    });
+  }
 </script>
 </body>
 </html>
