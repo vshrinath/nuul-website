@@ -179,6 +179,30 @@
     .moment-after p { font-size: 0.82rem; color: var(--navy); line-height: 1.5; margin: 0; font-weight: 500; }
     @media (max-width: 680px) { .moments-grid { grid-template-columns: 1fr; } }
 
+    /* ─── Arc ─── */
+    .arc { background: var(--canvas); padding: clamp(4rem,10vw,8rem) 0; }
+    .arc-inner { max-width: 1000px; margin: 0 auto; padding: 0 clamp(1.25rem,4vw,3rem); }
+    .arc-head { max-width: 560px; margin: 0 auto clamp(3rem,6vw,5rem); text-align: center; }
+    .arc-stages { display: flex; flex-direction: column; gap: clamp(3.5rem,7vw,6rem); }
+    .arc-stage { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(2rem,5vw,5rem); align-items: center; }
+    .arc-stage:nth-child(even) .arc-stage-copy { order: 2; }
+    .arc-stage:nth-child(even) .arc-stage-visual { order: 1; }
+    .arc-stage-copy h3 { font-size: clamp(1.5rem,2.8vw,2.2rem); font-weight: 750; color: var(--navy); line-height: 1.15; letter-spacing: -0.025em; margin-bottom: 0.875rem; }
+    .arc-stage-copy p { font-size: 0.95rem; color: var(--muted); line-height: 1.65; margin: 0; }
+    .arc-stage-visual { border-radius: 24px; aspect-ratio: 4/3; display: flex; align-items: center; justify-content: center; font-size: 4.5rem; }
+    .arc-stage:nth-child(1) .arc-stage-visual { background: rgba(240,168,14,0.1); }
+    .arc-stage:nth-child(2) .arc-stage-visual { background: rgba(22,32,64,0.06); }
+    .arc-stage:nth-child(3) .arc-stage-visual { background: rgba(90,209,138,0.09); }
+    .arc-stage:nth-child(4) .arc-stage-visual { background: rgba(124,158,240,0.1); }
+    .arc-stage:nth-child(5) .arc-stage-visual { background: rgba(176,124,240,0.09); }
+    .arc-stage:nth-child(6) .arc-stage-visual { background: rgba(240,120,90,0.09); }
+    @media (max-width: 700px) {
+      .arc-stage { grid-template-columns: 1fr; }
+      .arc-stage:nth-child(even) .arc-stage-copy { order: 1; }
+      .arc-stage:nth-child(even) .arc-stage-visual { order: 2; }
+      .arc-stage-visual { aspect-ratio: 16/5; }
+    }
+
     /* ─── Capture ─── */
     .capture { background: var(--canvas2); }
     .capture-grid {
@@ -561,7 +585,7 @@
         The executive assistant<br>that never forgets.
       </h1>
       <p class="hero-sub">
-        Most days end with more undone than done — not because you didn't try, but because every task costs more than it should. nuul holds the context, tracks the open threads, and makes sure nothing slips. So you can be the calmer version of yourself.
+        You're not lazy. You're juggling too much. nuul handles the boring parts so you can be the calmer version of yourself.
       </p>
       <div class="hero-ctas">
         <a href="#pricing" class="btn btn-amber btn-lg">Get early access →</a>
@@ -610,130 +634,63 @@
 
 <!-- DIFM -->
 <section class="difm">
-  <div class="difm-inner">
-    <div class="difm-head reveal">
-      <p class="t-label">Why tasks pile up</p>
-      <h2 class="t-h1" style="color:#fff;margin-top:.75rem;">Every other tool makes <em style="color:var(--amber);font-style:normal;">you</em> the assistant.</h2>
-      <p style="margin-top:.875rem;">Most tasks don't pile up because they're hard. They pile up because starting each one costs too much — finding the file, locating the thread, reconstructing who said what. That overhead is invisible until it isn't. By evening, you're exhausted from the switching, not the work itself. The list carries over. The guilt sets in. nuul removes the friction so the work can actually get done.</p>
-    </div>
-    <div class="difm-cols reveal delay-1">
-      <div class="difm-col diy">
-        <span class="difm-col-tag">Every other tool</span>
-        <h3>You do it for the system.</h3>
-        <ul class="difm-items">
-          <li><span class="di">✗</span> Search email, then WhatsApp, then Notes to find one thing</li>
-          <li><span class="di">✗</span> Reconstruct context before every meeting</li>
-          <li><span class="di">✗</span> Paste history into every AI conversation from scratch</li>
-          <li><span class="di">✗</span> Rely on memory to catch open commitments</li>
-          <li><span class="di">✗</span> Maintain the system or watch it rot</li>
-        </ul>
-      </div>
-      <div class="difm-col difm-yes">
-        <span class="difm-col-tag">nuul</span>
-        <h3>The system does it for you.</h3>
-        <ul class="difm-items">
-          <li><span class="di">✓</span> Finds anything you've ever captured, instantly</li>
-          <li><span class="di">✓</span> Briefs you before every meeting automatically</li>
-          <li><span class="di">✓</span> Feeds relevant context to any AI you're already using</li>
-          <li><span class="di">✓</span> Surfaces open threads before they become missed commitments</li>
-          <li><span class="di">✓</span> Maintains itself — zero upkeep, ever</li>
-        </ul>
-      </div>
-    </div>
+  <div class="difm-inner" style="text-align:center;padding:clamp(3.5rem,8vw,6rem) clamp(1.25rem,4vw,3rem);">
+    <h2 class="t-h1 reveal" style="color:#fff;">You're not lazy.<br>You're juggling too much.</h2>
+    <p class="reveal delay-1" style="margin-top:1.25rem;color:rgba(255,255,255,0.58);font-size:1.05rem;line-height:1.6;max-width:440px;margin-left:auto;margin-right:auto;">Let nuul handle the boring parts.<br>You focus on what matters.</p>
   </div>
 </section>
 
-
-<!-- EVERYDAY MOMENTS -->
-<section class="moments">
-  <div class="moments-inner">
-    <div class="moments-head reveal">
-      <p class="t-label">The work before the work</p>
-      <h2 class="t-h1" style="color:var(--navy);margin-top:.75rem;">Every task comes with hidden steps.</h2>
-      <p style="margin-top:.875rem;"><em>"Ugh — I have to do all this before I can even start."</em><br>You know that feeling. Here's what it looks like on a normal day — and what nuul does instead.</p>
+<!-- ARC -->
+<section class="arc">
+  <div class="arc-inner">
+    <div class="arc-head reveal">
+      <p class="t-label">A different kind of day</p>
+      <h2 class="t-h1" style="color:var(--navy);margin-top:.75rem;">Delegate boring.</h2>
+      <p style="margin-top:.875rem;">Fire it in. Forget about it. nuul does the rest.</p>
     </div>
-    <div class="moments-grid">
-
-      <div class="moment-card reveal">
-        <div class="moment-situation">
-          <span class="moment-tag">Mid-afternoon</span>
-          <p>Your manager pings: <strong>"Can you send me that updated deck?"</strong> You're mid-task.</p>
+    <div class="arc-stages">
+      <div class="arc-stage reveal">
+        <div class="arc-stage-copy">
+          <h3>Fire and<br>(don't) forget.</h3>
+          <p>Voice note on a walk. A WhatsApp forward. A file dropped in a folder. It goes in. nuul picks it up. You move on — without tagging, filing, or thinking about it again.</p>
         </div>
-        <div class="moment-before">
-          <span class="moment-before-label">Work before the work</span>
-          <ol>
-            <li>Open email. Search "deck".</li>
-            <li>Figure out which version was final.</li>
-            <li>Find the thread to reply to.</li>
-            <li>Attach, send — then try to remember where you were.</li>
-          </ol>
-        </div>
-        <div class="moment-after">
-          <span class="moment-after-label">With nuul</span>
-          <p>"Find the deck I sent last week and reply to Ananya's message." Done — without leaving what you were doing.</p>
-        </div>
+        <div class="arc-stage-visual">🎙️</div>
       </div>
-
-      <div class="moment-card reveal delay-1">
-        <div class="moment-situation">
-          <span class="moment-tag">10 minutes before a call</span>
-          <p>Calendar fires. You're about to meet a client you last spoke to two months ago.</p>
+      <div class="arc-stage reveal delay-1">
+        <div class="arc-stage-copy">
+          <h3>nuul figures<br>out the rest.</h3>
+          <p>It reads what you sent, identifies the project, the people involved, and connects it to everything it already knows. You never file anything. It just knows.</p>
         </div>
-        <div class="moment-before">
-          <span class="moment-before-label">Work before the work</span>
-          <ol>
-            <li>Search calendar for the last meeting.</li>
-            <li>Open notes — try to find those notes.</li>
-            <li>Check WhatsApp for any follow-ups.</li>
-            <li>Still not sure what was left open.</li>
-          </ol>
-        </div>
-        <div class="moment-after">
-          <span class="moment-after-label">With nuul</span>
-          <p>"Brief me on Priya before my call." Her history, last conversation, open items — ready in seconds. You walk in ready.</p>
-        </div>
+        <div class="arc-stage-visual">🧠</div>
       </div>
-
-      <div class="moment-card reveal delay-2">
-        <div class="moment-situation">
-          <span class="moment-tag">Mid-call</span>
-          <p>A WhatsApp from your mom. The doctor needs her scan from March. You're on an important call.</p>
+      <div class="arc-stage reveal">
+        <div class="arc-stage-copy">
+          <h3>Everything waiting<br>when you need it.</h3>
+          <p>Before a meeting, before a task, before a conversation — the context is already assembled. The brief is ready. You walk in prepared without preparing.</p>
         </div>
-        <div class="moment-before">
-          <span class="moment-before-label">Work before the work</span>
-          <ol>
-            <li>Put the call on hold.</li>
-            <li>Search Downloads. Not there.</li>
-            <li>Check email — maybe you sent it to yourself?</li>
-            <li>Find it. Open WhatsApp. Attach. Send.</li>
-          </ol>
-        </div>
-        <div class="moment-after">
-          <span class="moment-after-label">With nuul</span>
-          <p>Forward mom's message to nuul. It finds the scan and sends it. You never left the call.</p>
-        </div>
+        <div class="arc-stage-visual">⚡</div>
       </div>
-
-      <div class="moment-card reveal delay-3">
-        <div class="moment-situation">
-          <span class="moment-tag">Someone asks a favour</span>
-          <p>A colleague forwards: <strong>"Do you know anyone with supply chain experience?"</strong></p>
+      <div class="arc-stage reveal delay-1">
+        <div class="arc-stage-copy">
+          <h3>Ask. Get<br>the full picture.</h3>
+          <p>Three months ago, you made a decision. Ask in plain language. nuul finds it instantly — with full context and exactly where it came from.</p>
         </div>
-        <div class="moment-before">
-          <span class="moment-before-label">Work before the work</span>
-          <ol>
-            <li>Mentally scan your contacts.</li>
-            <li>Open LinkedIn. Search your connections.</li>
-            <li>Try to remember that one person from six months ago.</li>
-            <li>Vague reply: "Let me think about it."</li>
-          </ol>
-        </div>
-        <div class="moment-after">
-          <span class="moment-after-label">With nuul</span>
-          <p>"Who in my network has supply chain experience?" — two names surfaced, with context on how you know them.</p>
-        </div>
+        <div class="arc-stage-visual">🔍</div>
       </div>
-
+      <div class="arc-stage reveal">
+        <div class="arc-stage-copy">
+          <h3>Say what you need.<br>nuul drafts it.</h3>
+          <p>Proposals, briefs, updates — assembled from your actual context, not a blank page. Edit what needs changing. Approve. Send.</p>
+        </div>
+        <div class="arc-stage-visual">📄</div>
+      </div>
+      <div class="arc-stage reveal delay-1">
+        <div class="arc-stage-copy">
+          <h3>For all of you,<br>not just work.</h3>
+          <p>Work vault, family vault, whatever else matters. Mom's medical records next to your project notes — each world completely separate, each one building its own memory.</p>
+        </div>
+        <div class="arc-stage-visual">🏡</div>
+      </div>
     </div>
   </div>
 </section>
@@ -774,49 +731,6 @@
             <div class="db-item-text"><strong>Call with Rajan at 3pm</strong> — background and last conversation ready when you are.</div>
             <div class="db-item-meta">Context prepared · 2 open items from last call</div>
           </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-<!-- HOW IT STARTS -->
-<section class="capture" id="capture">
-  <div class="capture-grid">
-    <div class="capture-copy reveal">
-      <p class="t-label">How it works</p>
-      <h2 class="t-h1" style="color:var(--navy);margin-bottom:1rem;">You already know how to use it.</h2>
-      <p>You're walking out of a meeting. A thought hits — you voice-note it. A client messages on WhatsApp — you forward it. Someone emails a document — you forward that too. That's it.</p>
-      <p>nuul picks it up, reads it, organises it, and connects it to everything else. No new app to learn. No new habit to build. Just the way you already work.</p>
-    </div>
-    <div class="capture-methods reveal delay-1">
-      <div class="capture-method">
-        <div class="capture-icon">💬</div>
-        <div>
-          <h4>WhatsApp it</h4>
-          <p>Forward a message, a voice note, a document. It flows into your vault without opening another app.</p>
-        </div>
-      </div>
-      <div class="capture-method">
-        <div class="capture-icon">🎙️</div>
-        <div>
-          <h4>Say it</h4>
-          <p>Voice note on the way to work. Transcribed, understood, and filed — no editing needed.</p>
-        </div>
-      </div>
-      <div class="capture-method">
-        <div class="capture-icon">📁</div>
-        <div>
-          <h4>Watch it</h4>
-          <p>Point nuul at your Downloads, desktop, or any folder you choose. Files land there, nuul picks them up — PDFs, recordings, screenshots, docs — read and filed automatically.</p>
-        </div>
-      </div>
-      <div class="capture-method">
-        <div class="capture-icon">📧</div>
-        <div>
-          <h4>Forward it</h4>
-          <p>An important email thread. Just forward it. nuul reads the context and adds it to the picture.</p>
         </div>
       </div>
     </div>
