@@ -160,6 +160,25 @@
     .flywheel-arrow { color: var(--amber); font-size: 1.4rem; flex-shrink: 0; opacity: 0.7; }
     @media (max-width: 560px) { .flywheel-inner { flex-direction: column; } .flywheel-arrow { transform: rotate(90deg); } }
 
+    /* ─── Everyday Moments ─── */
+    .moments { background: var(--canvas2); }
+    .moments-inner { max-width: 1060px; margin: 0 auto; padding: clamp(3rem,8vw,6rem) clamp(1.25rem,4vw,3rem); }
+    .moments-head { max-width: 600px; margin: 0 auto clamp(2rem,5vw,4rem); text-align: center; }
+    .moments-head em { font-style: italic; color: var(--navy); }
+    .moments-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; }
+    .moment-card { background: #fff; border: 1px solid rgba(22,32,64,0.1); border-radius: 16px; overflow: hidden; display: flex; flex-direction: column; }
+    .moment-situation { padding: 1.1rem 1.35rem; border-bottom: 1px solid rgba(22,32,64,0.08); }
+    .moment-tag { font-size: 0.67rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); display: block; margin-bottom: 0.5rem; }
+    .moment-situation p { font-size: 0.875rem; color: var(--ink); line-height: 1.5; margin: 0; }
+    .moment-before { padding: 0.9rem 1.35rem; background: rgba(22,32,64,0.025); border-bottom: 1px solid rgba(22,32,64,0.06); flex: 1; }
+    .moment-before-label { font-size: 0.67rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: rgba(22,32,64,0.35); margin-bottom: 0.6rem; display: block; }
+    .moment-before ol { margin: 0; padding-left: 1.1rem; }
+    .moment-before ol li { font-size: 0.8rem; color: var(--muted); line-height: 1.5; margin-bottom: 0.2rem; }
+    .moment-after { padding: 0.9rem 1.35rem; border-top: 2px solid rgba(240,168,14,0.3); }
+    .moment-after-label { font-size: 0.67rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--amber); margin-bottom: 0.5rem; display: block; }
+    .moment-after p { font-size: 0.82rem; color: var(--navy); line-height: 1.5; margin: 0; font-weight: 500; }
+    @media (max-width: 680px) { .moments-grid { grid-template-columns: 1fr; } }
+
     /* ─── Capture ─── */
     .capture { background: var(--canvas2); }
     .capture-grid {
@@ -589,22 +608,174 @@
 </section>
 
 
-<!-- FLYWHEEL -->
-<section class="flywheel">
-  <div class="flywheel-inner reveal">
-    <div class="flywheel-step">
-      <h4>Capture</h4>
-      <p>Voice notes, WhatsApp, folders, emails — collected without friction.</p>
+<!-- DIFM -->
+<section class="difm">
+  <div class="difm-inner">
+    <div class="difm-head reveal">
+      <p class="t-label">Why tasks pile up</p>
+      <h2 class="t-h1" style="color:#fff;margin-top:.75rem;">Every other tool makes <em style="color:var(--amber);font-style:normal;">you</em> the assistant.</h2>
+      <p style="margin-top:.875rem;">Most tasks don't pile up because they're hard. They pile up because starting each one costs too much — finding the file, locating the thread, reconstructing who said what. That overhead is invisible until it isn't. By evening, you're exhausted from the switching, not the work itself. The list carries over. The guilt sets in. nuul removes the friction so the work can actually get done.</p>
     </div>
-    <div class="flywheel-arrow">→</div>
-    <div class="flywheel-step">
-      <h4>Remember</h4>
-      <p>Every decision, person, and thread — connected and always current.</p>
+    <div class="difm-cols reveal delay-1">
+      <div class="difm-col diy">
+        <span class="difm-col-tag">Every other tool</span>
+        <h3>You do it for the system.</h3>
+        <ul class="difm-items">
+          <li><span class="di">✗</span> Search email, then WhatsApp, then Notes to find one thing</li>
+          <li><span class="di">✗</span> Reconstruct context before every meeting</li>
+          <li><span class="di">✗</span> Paste history into every AI conversation from scratch</li>
+          <li><span class="di">✗</span> Rely on memory to catch open commitments</li>
+          <li><span class="di">✗</span> Maintain the system or watch it rot</li>
+        </ul>
+      </div>
+      <div class="difm-col difm-yes">
+        <span class="difm-col-tag">nuul</span>
+        <h3>The system does it for you.</h3>
+        <ul class="difm-items">
+          <li><span class="di">✓</span> Finds anything you've ever captured, instantly</li>
+          <li><span class="di">✓</span> Briefs you before every meeting automatically</li>
+          <li><span class="di">✓</span> Feeds relevant context to any AI you're already using</li>
+          <li><span class="di">✓</span> Surfaces open threads before they become missed commitments</li>
+          <li><span class="di">✓</span> Maintains itself — zero upkeep, ever</li>
+        </ul>
+      </div>
     </div>
-    <div class="flywheel-arrow">→</div>
-    <div class="flywheel-step">
-      <h4>Create</h4>
-      <p>Proposals, briefs, updates — drafted from context, not a blank page.</p>
+  </div>
+</section>
+
+
+<!-- EVERYDAY MOMENTS -->
+<section class="moments">
+  <div class="moments-inner">
+    <div class="moments-head reveal">
+      <p class="t-label">The work before the work</p>
+      <h2 class="t-h1" style="color:var(--navy);margin-top:.75rem;">Every task comes with hidden steps.</h2>
+      <p style="margin-top:.875rem;"><em>"Ugh — I have to do all this before I can even start."</em><br>You know that feeling. Here's what it looks like on a normal day — and what nuul does instead.</p>
+    </div>
+    <div class="moments-grid">
+
+      <div class="moment-card reveal">
+        <div class="moment-situation">
+          <span class="moment-tag">Mid-afternoon</span>
+          <p>Your manager pings: <strong>"Can you send me that updated deck?"</strong> You're mid-task.</p>
+        </div>
+        <div class="moment-before">
+          <span class="moment-before-label">Work before the work</span>
+          <ol>
+            <li>Open email. Search "deck".</li>
+            <li>Figure out which version was final.</li>
+            <li>Find the thread to reply to.</li>
+            <li>Attach, send — then try to remember where you were.</li>
+          </ol>
+        </div>
+        <div class="moment-after">
+          <span class="moment-after-label">With nuul</span>
+          <p>"Find the deck I sent last week and reply to Ananya's message." Done — without leaving what you were doing.</p>
+        </div>
+      </div>
+
+      <div class="moment-card reveal delay-1">
+        <div class="moment-situation">
+          <span class="moment-tag">10 minutes before a call</span>
+          <p>Calendar fires. You're about to meet a client you last spoke to two months ago.</p>
+        </div>
+        <div class="moment-before">
+          <span class="moment-before-label">Work before the work</span>
+          <ol>
+            <li>Search calendar for the last meeting.</li>
+            <li>Open notes — try to find those notes.</li>
+            <li>Check WhatsApp for any follow-ups.</li>
+            <li>Still not sure what was left open.</li>
+          </ol>
+        </div>
+        <div class="moment-after">
+          <span class="moment-after-label">With nuul</span>
+          <p>"Brief me on Priya before my call." Her history, last conversation, open items — ready in seconds. You walk in ready.</p>
+        </div>
+      </div>
+
+      <div class="moment-card reveal delay-2">
+        <div class="moment-situation">
+          <span class="moment-tag">Mid-call</span>
+          <p>A WhatsApp from your mom. The doctor needs her scan from March. You're on an important call.</p>
+        </div>
+        <div class="moment-before">
+          <span class="moment-before-label">Work before the work</span>
+          <ol>
+            <li>Put the call on hold.</li>
+            <li>Search Downloads. Not there.</li>
+            <li>Check email — maybe you sent it to yourself?</li>
+            <li>Find it. Open WhatsApp. Attach. Send.</li>
+          </ol>
+        </div>
+        <div class="moment-after">
+          <span class="moment-after-label">With nuul</span>
+          <p>Forward mom's message to nuul. It finds the scan and sends it. You never left the call.</p>
+        </div>
+      </div>
+
+      <div class="moment-card reveal delay-3">
+        <div class="moment-situation">
+          <span class="moment-tag">Someone asks a favour</span>
+          <p>A colleague forwards: <strong>"Do you know anyone with supply chain experience?"</strong></p>
+        </div>
+        <div class="moment-before">
+          <span class="moment-before-label">Work before the work</span>
+          <ol>
+            <li>Mentally scan your contacts.</li>
+            <li>Open LinkedIn. Search your connections.</li>
+            <li>Try to remember that one person from six months ago.</li>
+            <li>Vague reply: "Let me think about it."</li>
+          </ol>
+        </div>
+        <div class="moment-after">
+          <span class="moment-after-label">With nuul</span>
+          <p>"Who in my network has supply chain experience?" — two names surfaced, with context on how you know them.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- DAILY BRIEF -->
+<section class="daily-brief">
+  <div class="daily-brief-inner reveal">
+    <span class="daily-brief-label">Close the day. Actually rest.</span>
+    <p class="daily-brief-sub">The brief catches what you'd otherwise lie awake worrying about.</p>
+    <div class="db-card">
+      <div class="db-greeting">Good morning — here's what's open today</div>
+      <div class="db-items">
+        <div class="db-item">
+          <div class="db-item-icon">📋</div>
+          <div class="db-item-body">
+            <div class="db-item-text"><strong>Follow up with David</strong> on the proposal — from your Tuesday meeting notes.</div>
+            <div class="db-item-meta">Open for 3 days · tagged: proposal, david</div>
+          </div>
+        </div>
+        <div class="db-item">
+          <div class="db-item-icon">📄</div>
+          <div class="db-item-body">
+            <div class="db-item-text"><strong>Priya is waiting on the revised contract</strong> — you committed to this in August.</div>
+            <div class="db-item-meta">Still open · from your August call notes</div>
+          </div>
+        </div>
+        <div class="db-item">
+          <div class="db-item-icon">🎓</div>
+          <div class="db-item-body">
+            <div class="db-item-text"><strong>Arjun's maths worksheet is due today</strong> — from the photo you forwarded Monday.</div>
+            <div class="db-item-meta">Personal vault · school</div>
+          </div>
+        </div>
+        <div class="db-item">
+          <div class="db-item-icon">📞</div>
+          <div class="db-item-body">
+            <div class="db-item-text"><strong>Call with Rajan at 3pm</strong> — background and last conversation ready when you are.</div>
+            <div class="db-item-meta">Context prepared · 2 open items from last call</div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -647,42 +818,6 @@
           <h4>Forward it</h4>
           <p>An important email thread. Just forward it. nuul reads the context and adds it to the picture.</p>
         </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-<!-- DIFM -->
-<section class="difm">
-  <div class="difm-inner">
-    <div class="difm-head reveal">
-      <p class="t-label">Why tasks pile up</p>
-      <h2 class="t-h1" style="color:#fff;margin-top:.75rem;">Every other tool makes <em style="color:var(--amber);font-style:normal;">you</em> the assistant.</h2>
-      <p style="margin-top:.875rem;">Most tasks don't pile up because they're hard. They pile up because starting each one costs too much — finding the file, locating the thread, reconstructing who said what. That overhead is invisible until it isn't. By evening, you're exhausted from the switching, not the work itself. The list carries over. The guilt sets in. nuul removes the friction so the work can actually get done.</p>
-    </div>
-    <div class="difm-cols reveal delay-1">
-      <div class="difm-col diy">
-        <span class="difm-col-tag">Every other tool</span>
-        <h3>You do it for the system.</h3>
-        <ul class="difm-items">
-          <li><span class="di">✗</span> Search email, then WhatsApp, then Notes to find one thing</li>
-          <li><span class="di">✗</span> Reconstruct context before every meeting</li>
-          <li><span class="di">✗</span> Paste history into every AI conversation from scratch</li>
-          <li><span class="di">✗</span> Rely on memory to catch open commitments</li>
-          <li><span class="di">✗</span> Maintain the system or watch it rot</li>
-        </ul>
-      </div>
-      <div class="difm-col difm-yes">
-        <span class="difm-col-tag">nuul</span>
-        <h3>The system does it for you.</h3>
-        <ul class="difm-items">
-          <li><span class="di">✓</span> Finds anything you've ever captured, instantly</li>
-          <li><span class="di">✓</span> Briefs you before every meeting automatically</li>
-          <li><span class="di">✓</span> Feeds relevant context to any AI you're already using</li>
-          <li><span class="di">✓</span> Surfaces open threads before they become missed commitments</li>
-          <li><span class="di">✓</span> Maintains itself — zero upkeep, ever</li>
-        </ul>
       </div>
     </div>
   </div>
@@ -793,84 +928,6 @@
 </section>
 
 
-<!-- DAILY BRIEF -->
-<section class="daily-brief">
-  <div class="daily-brief-inner reveal">
-    <span class="daily-brief-label">Close the day. Actually rest.</span>
-    <p class="daily-brief-sub">The brief catches what you'd otherwise lie awake worrying about.</p>
-    <div class="db-card">
-      <div class="db-greeting">Good morning — here's what's open today</div>
-      <div class="db-items">
-        <div class="db-item">
-          <div class="db-item-icon">📋</div>
-          <div class="db-item-body">
-            <div class="db-item-text"><strong>Follow up with David</strong> on the proposal — from your Tuesday meeting notes.</div>
-            <div class="db-item-meta">Open for 3 days · tagged: proposal, david</div>
-          </div>
-        </div>
-        <div class="db-item">
-          <div class="db-item-icon">📄</div>
-          <div class="db-item-body">
-            <div class="db-item-text"><strong>Priya is waiting on the revised contract</strong> — you committed to this in August.</div>
-            <div class="db-item-meta">Still open · from your August call notes</div>
-          </div>
-        </div>
-        <div class="db-item">
-          <div class="db-item-icon">🎓</div>
-          <div class="db-item-body">
-            <div class="db-item-text"><strong>Arjun's maths worksheet is due today</strong> — from the photo you forwarded Monday.</div>
-            <div class="db-item-meta">Personal vault · school</div>
-          </div>
-        </div>
-        <div class="db-item">
-          <div class="db-item-icon">📞</div>
-          <div class="db-item-body">
-            <div class="db-item-text"><strong>Call with Rajan at 3pm</strong> — background and last conversation ready when you are.</div>
-            <div class="db-item-meta">Context prepared · 2 open items from last call</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-<!-- WHO IT'S FOR -->
-<section class="personas" id="personas">
-  <div class="persona-head reveal">
-    <p class="t-label">Who it's for</p>
-    <h2 class="t-h1" style="margin-top:.75rem;">Built for people who carry a lot.</h2>
-    <p style="margin-top:.875rem;">If your work is complex, your context is scattered, and your brain is spending too much time filing — nuul is for you.</p>
-  </div>
-  <div class="persona-grid">
-    <div class="persona-card reveal">
-      <div class="persona-icon">🚀</div>
-      <h3>Founders</h3>
-      <span class="persona-role">CEO · Co-founder · Operator</span>
-      <p>You're running a company inside your head. The investor call from Tuesday, the product decision made on a walk, the open thread with your co-founder — scattered across notes, WhatsApp, and memory. nuul holds the whole picture so you can focus on what's next.</p>
-    </div>
-    <div class="persona-card reveal delay-1">
-      <div class="persona-icon">🏢</div>
-      <h3>Business Leaders</h3>
-      <span class="persona-role">CXO · VP · Chief of Staff</span>
-      <p>You walk into ten meetings a week. nuul walks in ready — with everything said last time, everything still open, and the full context to ask the right question at the right moment. No prep time. No gaps.</p>
-    </div>
-    <div class="persona-card reveal delay-2">
-      <div class="persona-icon">📰</div>
-      <h3>Journalists & Researchers</h3>
-      <span class="persona-role">Writers · Researchers · Editors</span>
-      <p>Months of interviews, sources, and observations — structurally connected, not buried in notebooks. Pull a story brief from everything you've gathered, not just what you happened to remember to write down.</p>
-    </div>
-    <div class="persona-card reveal delay-3">
-      <div class="persona-icon">🎯</div>
-      <h3>Consultants & Advisors</h3>
-      <span class="persona-role">Consultants · Analysts · Advisors</span>
-      <p>Each client is a world of context. nuul keeps them separate — each one accumulating its own memory — so you always know where you are, whatever hat you're wearing that day.</p>
-    </div>
-  </div>
-</section>
-
-
 <!-- CREATE & SHARE -->
 <section class="create">
   <div class="create-inner">
@@ -934,6 +991,71 @@
 </section>
 
 
+<!-- WHO IT'S FOR -->
+<section class="personas" id="personas">
+  <div class="persona-head reveal">
+    <p class="t-label">Who it's for</p>
+    <h2 class="t-h1" style="margin-top:.75rem;">Built for people who carry a lot.</h2>
+    <p style="margin-top:.875rem;">If your work is complex, your context is scattered, and your brain is spending too much time filing — nuul is for you.</p>
+  </div>
+  <div class="persona-grid">
+    <div class="persona-card reveal">
+      <div class="persona-icon">🚀</div>
+      <h3>Founders</h3>
+      <span class="persona-role">CEO · Co-founder · Operator</span>
+      <p>You're running a company inside your head. The investor call from Tuesday, the product decision made on a walk, the open thread with your co-founder — scattered across notes, WhatsApp, and memory. nuul holds the whole picture so you can focus on what's next.</p>
+    </div>
+    <div class="persona-card reveal delay-1">
+      <div class="persona-icon">🏢</div>
+      <h3>Business Leaders</h3>
+      <span class="persona-role">CXO · VP · Chief of Staff</span>
+      <p>You walk into ten meetings a week. nuul walks in ready — with everything said last time, everything still open, and the full context to ask the right question at the right moment. No prep time. No gaps.</p>
+    </div>
+    <div class="persona-card reveal delay-2">
+      <div class="persona-icon">📰</div>
+      <h3>Journalists & Researchers</h3>
+      <span class="persona-role">Writers · Researchers · Editors</span>
+      <p>Months of interviews, sources, and observations — structurally connected, not buried in notebooks. Pull a story brief from everything you've gathered, not just what you happened to remember to write down.</p>
+    </div>
+    <div class="persona-card reveal delay-3">
+      <div class="persona-icon">🎯</div>
+      <h3>Consultants & Advisors</h3>
+      <span class="persona-role">Consultants · Analysts · Advisors</span>
+      <p>Each client is a world of context. nuul keeps them separate — each one accumulating its own memory — so you always know where you are, whatever hat you're wearing that day.</p>
+    </div>
+  </div>
+</section>
+
+
+<!-- PRINCIPLES -->
+<section class="principles">
+  <div class="principles-inner">
+    <div class="principles-head reveal">
+      <p class="t-label">Designed differently</p>
+      <h2 class="t-h1" style="color:var(--navy);margin-top:.75rem;">Built on principles,<br>not just features.</h2>
+      <p style="margin-top:.875rem;">Three decisions we made before we wrote a line of code — and that we'll never walk back.</p>
+    </div>
+    <div class="principles-grid">
+      <div class="principle-card reveal">
+        <span class="principle-icon">🔒</span>
+        <h3>Private by design</h3>
+        <p>Your data is stored in files you own and control — not locked inside a vendor's database. nuul never trains on it, sells it, or accesses it without your knowledge. Whatever hosting option you choose, that guarantee never changes.</p>
+      </div>
+      <div class="principle-card reveal delay-1">
+        <span class="principle-icon">💰</span>
+        <h3>Affordable by design</h3>
+        <p>Most of what nuul does — filing, connecting, organising — happens automatically without an expensive AI call. Intelligence fires only when you need it, keeping costs low by design.</p>
+      </div>
+      <div class="principle-card reveal delay-2">
+        <span class="principle-icon">🌐</span>
+        <h3>Open by design</h3>
+        <p>Use Claude today, switch to something better tomorrow — your entire accumulated context travels with you. Plain files, any model, no lock-in. That's the whole point.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
 <!-- FEATURES -->
 <section class="features">
   <div class="section-head reveal">
@@ -989,35 +1111,6 @@
       </div>
     </div>
     <p class="feat-hint">← swipe to explore →</p>
-  </div>
-</section>
-
-
-<!-- PRINCIPLES -->
-<section class="principles">
-  <div class="principles-inner">
-    <div class="principles-head reveal">
-      <p class="t-label">Designed differently</p>
-      <h2 class="t-h1" style="color:var(--navy);margin-top:.75rem;">Built on principles,<br>not just features.</h2>
-      <p style="margin-top:.875rem;">Three decisions we made before we wrote a line of code — and that we'll never walk back.</p>
-    </div>
-    <div class="principles-grid">
-      <div class="principle-card reveal">
-        <span class="principle-icon">🔒</span>
-        <h3>Private by design</h3>
-        <p>Your data is stored in files you own and control — not locked inside a vendor's database. nuul never trains on it, sells it, or accesses it without your knowledge. Whatever hosting option you choose, that guarantee never changes.</p>
-      </div>
-      <div class="principle-card reveal delay-1">
-        <span class="principle-icon">💰</span>
-        <h3>Affordable by design</h3>
-        <p>Most of what nuul does — filing, connecting, organising — happens automatically without an expensive AI call. Intelligence fires only when you need it, keeping costs low by design.</p>
-      </div>
-      <div class="principle-card reveal delay-2">
-        <span class="principle-icon">🌐</span>
-        <h3>Open by design</h3>
-        <p>Use Claude today, switch to something better tomorrow — your entire accumulated context travels with you. Plain files, any model, no lock-in. That's the whole point.</p>
-      </div>
-    </div>
   </div>
 </section>
 
