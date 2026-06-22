@@ -2,7 +2,7 @@
   "version": "0.0.1",
   "configurations": [
     {
-      "name": "nuul-website",
+      "name": "dori-website",
       "runtimeExecutable": "npx",
       "runtimeArgs": ["serve", "-p", "4321", "."],
       "port": 4321
